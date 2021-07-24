@@ -20,6 +20,5 @@ class Users(
     @Column(name = "username", unique = true) var username: String,
     @Column(name = "email") @NotBlank @Size(max = 50) @Email var email: String,
     @Column(name = "password") @NotBlank @Size(max = 120) var password: String,
-    @Column(name = "first_name") var firstname: String,
-    @Column(name = "last_name") var lastname: String
+    @OneToOne(cascade = [CascadeType.ALL]) @JoinColumn(name = "user_details_id", referencedColumnName = "user_details_id") var userDetails: UserDetails
 )
