@@ -13,4 +13,5 @@ interface UsersRepository : JpaRepository<Users, Long>{
     override fun findById(id: Long): Optional<Users>
     fun findByUsername(username: String): Users?
     fun findByEmail(email: String): Users?
+    fun getUsers(): List<Users>?
 }
