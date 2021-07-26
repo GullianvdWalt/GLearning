@@ -1,5 +1,6 @@
 package com.gvdw.glearning.services
 
+import com.gvdw.glearning.models.UserDetails
 import com.gvdw.glearning.models.Users
 
 /**
@@ -10,4 +11,5 @@ interface UsersService {
     fun getUsers(): List<Users>?
     fun saveUser(user: Users): Void?
     fun deleteUser(user: Users): Void?
+    fun saveUserDetails(userDetails: UserDetails): Void?
 }
